@@ -1,11 +1,11 @@
  
 import React, { useState } from 'react';
 import './App.css';
-import About from './components/About';
+// import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert'; 
-import { BrowserRouter, Routes, Route, Link, } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
  
 
 function App() {
@@ -45,12 +45,14 @@ function App() {
       <div className="container my-3"> 
        
       
-      <Routes>
-        <Route exact path="/" element={<TextForm healine="Enter the text to analyze below" mode={mode} showAlert={showAlert}/>}>  
-        </Route>
-        <Route exact path="/about" element={<About/>}>  
-        </Route>
-      </Routes>
+      {/* <Routes> */}
+        {/* <Route exact path="/" element={<TextForm healine="Enter the text to analyze below" mode={mode} showAlert={showAlert}/>}>  
+        </Route> */}
+
+        <TextForm healine="Enter the text to analyze below" mode={mode} showAlert={showAlert}/>
+        {/* <Route exact path="/about" element={<About/>}>  
+        </Route> */}
+      {/* </Routes> */}
 
       </div>
      
